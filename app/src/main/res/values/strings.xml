@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CoffeeHouse</string>
+    <string name="placeholder_for_distance">\??? m</string>
+    <string name="meters_for_distance">" m"</string>
+    <string name="rubles_for_price">" руб"</string>
+
+    <string name="editable_title_email">email</string>
+    <string name="editable_title_password">Пароль</string>
+    <string name="registration_button_desc">Нет аккаунта? Регистрация</string>
+    <string name="editable_title_repeat_password">Повторите пароль</string>
+
+    <string name="timeout_title">Время сеанса истекло</string>
+    <string name="timeout_desc">Выполните повторную авторизацию</string>
+
+    <string name="order_time_title">
+        Время ожидания заказа"\n"
+        15 минут!"\n"
+        Спасибо, что выбрали нас!
+    </string>
+
+    <string name="login_title">Вход</string>
+    <string name="registration_title">Регистрация</string>
+    <string name="cafe_list_title">Ближайшие кофейни</string>
+    <string name="map_title">Карта</string>
+    <string name="menu_title">Меню</string>
+    <string name="order_title">Ваш заказ</string>
+
+    <string name="button_title_enter">Войти</string>
+    <string name="button_title_register">Регистрация</string>
+    <string name="button_title_map">На карте</string>
+    <string name="button_title_order">Перейти к оплате</string>
+    <string name="button_title_pay">Оплатить</string>
+</resources>
