@@ -1,6 +1,5 @@
 package com.example.coffeehouse.data.repository
 
-import android.util.Log
 import com.example.coffeehouse.data.api.CoffeeApi
 import com.example.coffeehouse.data.mapper.toDomain
 import com.example.coffeehouse.data.model.AuthRequest

@@ -1,7 +1,6 @@
 package com.example.coffeehouse.domain.usecase
 
 import com.example.coffeehouse.data.TokenDataStore
-import com.example.coffeehouse.domain.model.AuthToken
 import com.example.coffeehouse.domain.repository.CoffeeHouseRepository
 import javax.inject.Inject
 

@@ -7,7 +7,6 @@ import com.example.coffeehouse.domain.model.CoffeeHouse
 import com.example.coffeehouse.domain.usecase.GetCoffeeHouseListUseCase
 import com.example.coffeehouse.ui.cafebrowser.model.BrowserState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -34,7 +33,6 @@ class CafeBrowserViewModel @Inject constructor(
 
     }
 
-
     fun updateBrowserState() {
         _browserState.value = when(_browserState.value) {
             BrowserState.LIST -> BrowserState.MAP
@@ -44,11 +42,6 @@ class CafeBrowserViewModel @Inject constructor(
 
     fun updateCurrentPoint(point: CoffeeHouse.Point?) {
         _currentPoint.value = point
-    }
-
-    suspend fun rofl() {
-        delay(5000)
-        _isTokenValid.value = false
     }
 
     private fun getCafeList() {

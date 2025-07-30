@@ -1,6 +1,5 @@
 package com.example.coffeehouse.ui.navigation
 
-import android.content.Context
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost

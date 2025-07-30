@@ -1,11 +1,8 @@
 package com.example.coffeehouse.di
 
 
-import android.util.Log
-import androidx.datastore.dataStore
 import com.example.coffeehouse.data.TokenDataStore
 import com.example.coffeehouse.data.api.CoffeeApi
-import com.yandex.mapkit.MapKitFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,11 +11,9 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
-import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Inject
 import javax.inject.Singleton
 
 @Module
