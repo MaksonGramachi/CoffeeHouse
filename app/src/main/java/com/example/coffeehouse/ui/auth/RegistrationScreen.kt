@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -79,6 +81,7 @@ fun RegistrationScreen(
                         .widthIn(max = 500.dp)
                         .padding(start = 18.dp, end = 18.dp)
                         .align(Alignment.Center)
+                        .verticalScroll(rememberScrollState())
                 ) {
                     Text(
                         text = exceptionMessage,

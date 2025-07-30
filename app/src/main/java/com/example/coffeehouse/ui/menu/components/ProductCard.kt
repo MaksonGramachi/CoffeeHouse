@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.CornerRadius
@@ -54,10 +55,12 @@ fun ProductCard(
                         cornerRadius = CornerRadius(5.dp.toPx())
                     )
                 }
-                .background(Color.White, RoundedCornerShape(5.dp))) {
+                .background(Color.White, RoundedCornerShape(5.dp))
+                .clip(RoundedCornerShape(5.dp))
+        ) {
             AsyncImage(
                 model = if (productInfo.productCard.imageUrl.isEmpty()) productInfo.productCard.imageUrl else painterResource(
-                    id = R.drawable.ic_launcher_foreground
+                    id = R.drawable.ic_launcher_foreground // Заглушка
                 ),
                 contentDescription = "",
                 modifier = Modifier

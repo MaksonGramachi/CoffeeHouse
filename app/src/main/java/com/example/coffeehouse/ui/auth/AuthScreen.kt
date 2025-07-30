@@ -34,7 +34,7 @@ fun AuthScreen(
 }
 
 @Composable
-fun AuthScreen(
+private fun AuthScreen(
     email: String,
     password: String,
     repeatedPassword: String,

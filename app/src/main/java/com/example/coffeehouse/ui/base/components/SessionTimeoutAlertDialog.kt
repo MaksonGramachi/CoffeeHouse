@@ -1,10 +1,11 @@
-package com.example.coffeehouse.ui.cafebrowser.components
+package com.example.coffeehouse.ui.base.components
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 import com.example.coffeehouse.R
 
@@ -16,7 +17,7 @@ fun SessionTimeoutAlertDialog(moveToLoginScreen: () -> Unit) {
         text = {
             Text(
                 text = stringResource(R.string.timeout_desc),
-                style = androidx.compose.ui.text.TextStyle(fontSize = 16.sp)
+                style = TextStyle(fontSize = 16.sp)
             )
         },
         confirmButton = {

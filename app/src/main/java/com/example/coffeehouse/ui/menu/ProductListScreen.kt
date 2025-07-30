@@ -69,16 +69,16 @@ fun ProductListScreen(
                         }
                     },
                 )
+                HorizontalDivider(
+                    thickness = 1.dp,
+                    color = colorResource(id = R.color.gray)
+                )
+                HorizontalDivider(
+                    thickness = 1.dp,
+                    color = colorResource(id = R.color.gray),
+                    modifier = Modifier.padding(top = 1.dp)
+                )
             }
-            HorizontalDivider(
-                thickness = 1.dp,
-                color = colorResource(id = R.color.gray)
-            )
-            HorizontalDivider(
-                thickness = 1.dp,
-                color = colorResource(id = R.color.gray),
-                modifier = Modifier.padding(top = 1.dp)
-            )
 
         },
         content = { padding ->
@@ -133,7 +133,7 @@ fun GreetingPreview() {
     val productInfo = ProductInfo(menu, 2u)
     ProductListScreen(
         listOf<ProductInfo>(
-            productInfo, productInfo, productInfo, productInfo, productInfo, productInfo, productInfo, productInfo,
+            productInfo,productInfo,productInfo,productInfo,productInfo,productInfo,productInfo,
         ),{},{}, {}, {}
     )
 }

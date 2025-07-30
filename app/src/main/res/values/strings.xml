@@ -12,6 +12,9 @@
     <string name="timeout_title">Время сеанса истекло</string>
     <string name="timeout_desc">Выполните повторную авторизацию</string>
 
+    <string name="ethernet_title">Проблемы с соединением</string>
+    <string name="ethernet_desc">Проверьте подключение интернет соединения</string>
+
     <string name="order_time_title">
         Время ожидания заказа"\n"
         15 минут!"\n"
@@ -30,4 +33,5 @@
     <string name="button_title_map">На карте</string>
     <string name="button_title_order">Перейти к оплате</string>
     <string name="button_title_pay">Оплатить</string>
+    <string name="button_title_accept">Подтвердить</string>
 </resources>

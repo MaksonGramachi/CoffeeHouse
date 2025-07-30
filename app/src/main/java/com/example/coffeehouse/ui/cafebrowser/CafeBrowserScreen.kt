@@ -9,7 +9,8 @@ import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.coffeehouse.domain.model.CoffeeHouse
-import com.example.coffeehouse.ui.cafebrowser.components.SessionTimeoutAlertDialog
+import com.example.coffeehouse.ui.base.components.EthernetConnectionAlertDialog
+import com.example.coffeehouse.ui.base.components.SessionTimeoutAlertDialog
 import com.example.coffeehouse.ui.cafebrowser.model.BrowserState
 import com.example.coffeehouse.ui.navigation.CafeMenu
 import com.example.coffeehouse.ui.navigation.Login
@@ -25,15 +26,23 @@ fun CafeBrowserScreen(
 ) {
     val cafeList by viewModel.cafeList.collectAsState()
     val isTokenValid by viewModel.isTokenValid.collectAsState()
+    val isConnectSuccess by viewModel.isConnectSuccess.collectAsState()
     val browserState by viewModel.browserState.collectAsState()
 
     if (!isTokenValid) {
         SessionTimeoutAlertDialog({
-            navController.navigate(route = Login) {
-                popUpTo(Login)
-            }
+            navController.popBackStack(route = Login, false)
         })
     }
+
+    if(!isConnectSuccess) {
+        EthernetConnectionAlertDialog({
+            viewModel.updateConnectStatus()
+            viewModel.loadCafeList()
+        })
+    }
+
+
     val currentPoint by viewModel.currentPoint.collectAsState()
 
     val locationPermissionLauncher = rememberLauncherForActivityResult(
@@ -66,9 +75,7 @@ fun CafeBrowserScreen(
         updateBrowserState = viewModel::updateBrowserState,
         onNavigateNext = { navController.navigate(CafeMenu(it)) },
         onNavigateBack = {
-            navController.navigate(route = Login) {
-                popUpTo(Login) { inclusive = true }
-            }
+            navController.popBackStack()
         }
     )
 

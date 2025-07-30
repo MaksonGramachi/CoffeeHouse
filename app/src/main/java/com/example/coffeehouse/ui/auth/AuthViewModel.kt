@@ -69,6 +69,7 @@ class AuthViewModel @Inject constructor(
                         updateAuthState()
                     }
                 }
+                _exceptionMessage.value = ""
             }
             catch(e: Exception) {
                 processAuthException(e)

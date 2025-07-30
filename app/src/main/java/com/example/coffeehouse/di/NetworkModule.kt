@@ -29,9 +29,7 @@ object NetworkModule {
 
             val modifiedRequest = request.newBuilder()
                 .apply {
-                    if (!request.url.pathSegments.contains("auth")) {
-                        header("Authorization", "Bearer ${dataStore.accessToken.first()}")
-                    }
+                    header("Authorization", "Bearer ${dataStore.accessToken.first()}")
                 }
                 .build()
             chain.proceed(modifiedRequest)
@@ -44,7 +42,7 @@ object NetworkModule {
         authInterceptor: Interceptor
     ) = OkHttpClient.Builder()
         .addInterceptor(authInterceptor)
-        .readTimeout(30, TimeUnit.SECONDS)
+        .readTimeout(5, TimeUnit.SECONDS)
         .build()
 
 
